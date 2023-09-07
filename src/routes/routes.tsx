@@ -49,7 +49,7 @@ if(isAuth) {
             >
             </Route>
             <Route path="*"
-                   element={<Navigate to="/" replace/>}
+                   element={<Navigate to="/login" replace/>}
             >
             </Route>
         </Routes>

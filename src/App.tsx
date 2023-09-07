@@ -6,8 +6,8 @@ import {observer} from "mobx-react-lite";
 
 export const App = observer(() =>{
 
-    const {_isAuth} = userStore
-    const routes = useRoutes(_isAuth)
+    const {isAuth} = userStore
+    const routes = useRoutes(isAuth)
 
     return (
         <>
