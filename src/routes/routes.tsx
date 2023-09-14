@@ -3,13 +3,15 @@ import {LoginPage} from "../pages/LoginPage"
 import {RegistrationPage} from "../pages/RegisrationPage"
 import {HomePage} from "../pages/HomePage";
 import {UserPage} from "../pages/UserPage";
+import {userStore} from '../stores/user-store.tsx'
+import {useUserStore} from '../stores/user-store-zustand.tsx'
 
 // interface routesProps {
 //     isAuthenticated: boolean
 // }
 
-export const useRoutes = (isAuth : boolean) => {
-
+export const useRoutes = () => {
+    const {isAuth} = useUserStore()
 if(isAuth) {
         return (
             <Routes>

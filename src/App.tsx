@@ -1,14 +1,13 @@
 import {Navigation} from "./components/Navigation"
 import {useRoutes} from "./routes/routes.tsx"
 import styles from './index.module.scss'
-import {userStore} from "./stores/user-store.tsx";
-import {observer} from "mobx-react-lite";
+import {useEffect} from 'react'
+import {useUserStore} from './stores/user-store-zustand.tsx'
 
-export const App = observer(() =>{
+export const App = () =>{
+    const routes = useRoutes()
 
-    const {isAuth} = userStore
-    const routes = useRoutes(isAuth)
-
+    console.log('render')
     return (
         <>
             <div className={styles.app}>
@@ -21,4 +20,4 @@ export const App = observer(() =>{
 
 
     )
-})
+}
