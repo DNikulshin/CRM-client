@@ -4,9 +4,9 @@ import {persist} from 'zustand/middleware'
 import axios from 'axios'
 
 const instanceAxios = axios.create({
-    baseURL: import.meta.API_URL,
+    baseURL: import.meta.env.API_URL,
     params: {
-        key: import.meta.API_KEY
+        key: import.meta.env.API_KEY
     }
 })
 
